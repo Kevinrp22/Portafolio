@@ -14,7 +14,10 @@
 
 <style>
   .proyecto {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
+  }
+  .proyecto:last-child{
+    margin-bottom: 0px;
   }
   .proyecto__titulo {
     font-size: 1.5em;
