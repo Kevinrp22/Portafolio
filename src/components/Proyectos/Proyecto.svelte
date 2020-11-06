@@ -14,7 +14,7 @@
 
 <style>
   .proyecto {
-    margin: 4rem 0;
+    margin: 2rem 0;
   }
   .proyecto__titulo {
     font-size: 1.5em;
@@ -24,6 +24,14 @@
     font-size: 11px;
     color: #447f91;
   }
+  .en-desarrollo {
+    color: var(--color-blanco); /* #ffd91ed1 */
+    background-color: brown;
+    padding: 0.3rem;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+
   .proyecto__imagen {
     cursor: pointer;
     position: relative;
@@ -92,14 +100,19 @@
 </style>
 
 <div class="proyecto">
-  <h3 class="proyecto__titulo">Pizzeria</h3>
-  <p class="proyecto__tecnologias">{tecnologias}</p>
+  <h3 class="proyecto__titulo">{nombre}</h3>
+  <p class="proyecto__tecnologias">
+    {tecnologias}
+    {#if desarrollando}
+      <span class="en-desarrollo">Proyecto en desarrollo</span>
+    {/if}
+  </p>
   <div class="proyecto__imagen">
     <a href={link_proyecto} target="_blank">
       <img class="img-fluid" src={imagen} alt="" />
     </a>
-    <a  href={link_proyecto} class="hover-img"><i
-        class="fas fa-external-link-alt hover-img__icon" /></a> 
+    <a href={link_proyecto} class="hover-img"><i
+        class="fas fa-external-link-alt hover-img__icon" /></a>
   </div>
   <!-- style="font-size: 20px;margin: 0px 5px 0px 0px;" -->
   <div class="proyecto__links">
