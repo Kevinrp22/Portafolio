@@ -33,9 +33,21 @@
   main {
     position: relative;
     max-width: 56em;
-    padding: 2em;
+    padding: 6.5em 2em;
     margin: 0 auto;
     box-sizing: border-box;
+  }
+  footer {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 56em;
+    background-color: var(--color-azulFuerte);
+    padding: 1.5rem;
+  }
+  footer p {
+    margin: 0;
+    padding: .5rem 0;
+    color: var(--color-azul);
   }
 </style>
 
@@ -50,3 +62,8 @@
 <main>
   <slot />
 </main>
+
+<footer>
+  <p>Diseñado y contruido por Kevin Puchaicela</p>
+  <p>-2020-</p>
+</footer>

@@ -1,4 +1,5 @@
 <script>
+	import Diversiones from "../components/Diversion/Diversiones.svelte";
 	import Proyectos from "../components/Proyectos/Proyectos.svelte";
 </script>
 
@@ -24,13 +25,14 @@
 	/* SECTION SOBRE MI */
 	.sobre-mi__content__texto {
 		margin: 3rem 0;
+		text-align: justify;
 	}
 	.lista-code {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 10px;
+		padding: 0.6rem 0 0 0;
 		margin: 0;
-		padding: 0;
 		list-style: circle;
 	}
 	.lista-code__li {
@@ -59,7 +61,28 @@
 		mix-blend-mode: normal;
 		opacity: 1;
 	}
+	#sobre-mi .titulo-section {
+		padding: 8rem 0 0.5rem 0;
+	}
 	/* SECTION PROYECTOS */
+	/* SECTION CONTACTO */
+	.form {
+		display: flex;
+		flex-direction: column;
+		background-color: var(--background-secundario);
+		padding: 1rem;
+	}
+	.form__input {
+		padding: 1rem;
+		margin: 0.2rem 0;
+		font-size: 1em;
+	}
+	.form textarea {
+		margin: 0.2rem 0 0.6rem 0;
+		padding: 1rem;
+		height: 100px;
+		resize: none;
+	}
 </style>
 
 <section>
@@ -163,88 +186,22 @@
 <section id="proyectos">
 	<h2 class="titulo-section">Proyectos</h2>
 	<Proyectos />
-	<div class="contenedor-proyectos my-5">
-		<!-- <div class="proyecto py-4">
-			<div style="display: none; " class="titulo-arriba-proyecto">
-				<h4>Empresa de Construcciones y Reformas</h4>
-				<p style="font-size: 11px; color: #447f91;">HTML | CSS | JAVASCRIPT</p>
-			</div>
-			<div class="imagen-proyecto">
-				<a href="https://reformasmultiservicios.herokuapp.com/" target="_blank">
-					<img class="img-fluid" src="#" alt="" />
-				</a>
-			</div>
-
-			<div class="texto-proyecto">
-				<div class="titulo-derecha-proyecto">
-					<h4 style="font-size: 1.3rem;">
-						Empresa de Construcciones y Reformas
-					</h4>
-					<p style="font-size: 11px; color: #447f91;">
-						HTML | CSS | JAVASCRIPT
-					</p>
-				</div>
-
-				<div class="contenedor-mirar my-2">
-					<div class="bloque-mirar">
-						<a href="#">
-							<div style="display: flex;" class="arriba">
-								<i
-									style="font-size: 20px;margin: 0px 5px 0px 0px;"
-									class="fab fa-github" />
-								<p style="margin-bottom: 0;">Ver en Github</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="contenedor-mirar my-2">
-					<div class="bloque-mirar">
-						<a
-							href="https://reformasmultiservicios.herokuapp.com/"
-							target="_blank">
-							<div style="display: flex;" class="arriba">
-								<i
-									style="font-size: 20px;margin: 0px 10px 0px 0px;"
-									class="fas fa-folder-open" />
-								<p style="margin-bottom: 0;">Ver Proyecto</p>
-							</div>
-							<p
-								class="en-desarrollo"
-								style="margin-bottom: 0; font-size: 10px;">
-								(En desarrollo)
-							</p>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div> -->
-	</div>
 </section>
 <section id="por-diversion" class="contenedor">
-	<div class="titulo-section">
-		<h2 style="min-width: 213px; width: 300px;">Por diversión</h2>
-		<hr />
-	</div>
-	<div class="working"><i class="fas fa-cogs" /></div>
-
-	<div class="contenedor-por-diversion" />
+	<h2 class="titulo-section">Por diversión</h2>
+	<Diversiones />
 </section>
 
 <section id="contacto" class="contenedor">
-	<div class="titulo-section">
-		<h2>Contacto</h2>
-		<hr />
-	</div>
-	<div class="c-formu">
-		<div class="formu">
-			<form action="" class="__colums__form">
-				<input type="text" placeholder="Tu nombre" required />
-				<input type="tel" placeholder="Teléfono (Opcional)" />
-				<input type="email" placeholder="Email" required />
-				<input type="text" placeholder="Asunto" required />
-				<textarea type="text" placeholder="Mensaje / Consulta" required />
-				<input type="submit" value="ENVIAR FORMULARIO" class="boton-contacto" />
-			</form>
-		</div>
+	<h2 class="titulo-section">Contacto</h2>
+	<div class="formulario">
+		<form method="POST" action="https://formsubmit.co/kevinpuchaicela@gmail.com" enctype="multipart/form-data" class="form">
+			<input class="form__input" type="text" name="name" placeholder="Tu nombre" required />
+			<input class="form__input" type="tel" name="tel" placeholder="Teléfono (Opcional)" />
+			<input class="form__input" type="email" name="email" placeholder="Email" required />
+			<input class="form__input" type="text" name="message" placeholder="Asunto" required />
+			<textarea type="text" placeholder="Mensaje / Consulta" required />
+			<input class="btn" type="submit" value="ENVIAR FORMULARIO" />
+		</form>
 	</div>
 </section>

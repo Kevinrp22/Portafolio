@@ -26,9 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0 0 0.5em 0;
 	font-weight: 400;
-	line-height: 1.2;
 }
 
 h1 {
@@ -55,9 +53,7 @@ p {
 	font-weight: 500;
 }
 
-section {
-	padding: 6rem 0;
-}
+section {}
 
 ul {
 	list-style: none;
@@ -90,6 +86,17 @@ img {
 	border-radius: 4px;
 }
 
+input,
+textarea {
+
+	font-family: "Montserrat", sans-serif;
+}
+
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
 .color-azul {
 	color: var(--color-azul);
 }
@@ -99,7 +106,7 @@ img {
 	background-color: var(--color-azul);
 	padding: 0.8rem 1.5rem;
 	font-size: 1.2em;
-	font-weight: 700;
+	font-weight: 500;
 	color: white;
 	border: none;
 }
@@ -137,7 +144,7 @@ img {
 	font-weight: 500;
 	white-space: nowrap;
 	color: var(--color-blanco);
-	padding-bottom: 3rem;
+	padding: 3rem 0;
 }
 
 .titulo-section::after {
